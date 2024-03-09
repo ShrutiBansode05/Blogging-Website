@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show</title>
+    <style>
+
+        button{
+            height:35px;
+            width:150px;
+            background-color:rgb(9, 93, 150);
+            border-color:white;
+        }
+
+        a{
+            text-decoration:none;
+            color:black;
+        }
+
+        hr{
+            color:black; 
+            border-style: solid;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-1"><%=article.title%></h1>
+        <div class="text-muted mb-2">
+            <%=article.createdAt.toLocaleDateString()%>
+        </div>
+        <button><a href="/" class="btn btn-secondary">All Articles</a></button>
+        <button><a href="/articles/edit/<%=article.id%>"class="btn btn-info">Edit</a></button>
+    </div>
+    <br>
+    <hr>
+    <div>
+        <%- article.sanitizedHTML %>
+    </div>
+</body>
+</html>

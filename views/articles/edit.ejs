@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    <style>
+        body{
+            background-color:#a9def9;
+        }
+
+        h1{
+            text-align:center;
+        }
+
+        form{
+            height: 500px;
+            width: 500px;
+            background-color: #fcf6bd;
+            font-size:20px;
+            padding-left:60px;
+            padding-top:40px;
+            margin-left:400px;
+            line-height:30px;
+
+        }
+
+        .form-control{
+            height: 90px;
+            width:400px;
+        }
+
+        a{
+            text-decoration:none;
+            font-size:20px;
+            color:black;
+        }
+
+        button{
+            height:30px;
+            width:200px;
+            background-color:#e4c1f9;
+            font-size:20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">Edit Article</h1>
+        <form action="/articles/<%=article.id %>?_method=PUT" method="POST">
+            <%- include('form_field') %>
+        </form>
+    </div>
+</body>
+</html>
